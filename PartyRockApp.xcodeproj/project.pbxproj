@@ -14,6 +14,8 @@
 		F85EDC0220306DCA00D88E0F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F85EDC0020306DCA00D88E0F /* LaunchScreen.storyboard */; };
 		F85EDC0D20306DCA00D88E0F /* PartyRockAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85EDC0C20306DCA00D88E0F /* PartyRockAppTests.swift */; };
 		F85EDC1820306DCA00D88E0F /* PartyRockAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85EDC1720306DCA00D88E0F /* PartyRockAppUITests.swift */; };
+		F8990A1D204F46F800D89835 /* PartyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8990A1C204F46F800D89835 /* PartyCell.swift */; };
+		F8990A1F204F483F00D89835 /* PartyRock.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8990A1E204F483F00D89835 /* PartyRock.swift */; };
 		F8B001A9204B7F57000D5B4D /* VideoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B001A8204B7F57000D5B4D /* VideoVC.swift */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +50,8 @@
 		F85EDC1320306DCA00D88E0F /* PartyRockAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PartyRockAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F85EDC1720306DCA00D88E0F /* PartyRockAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyRockAppUITests.swift; sourceTree = "<group>"; };
 		F85EDC1920306DCA00D88E0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F8990A1C204F46F800D89835 /* PartyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyCell.swift; sourceTree = "<group>"; };
+		F8990A1E204F483F00D89835 /* PartyRock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyRock.swift; sourceTree = "<group>"; };
 		F8B001A8204B7F57000D5B4D /* VideoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -141,6 +145,7 @@
 		F85EDC2620306EF200D88E0F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F8990A1C204F46F800D89835 /* PartyCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -148,6 +153,7 @@
 		F85EDC2720306EF600D88E0F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F8990A1E204F483F00D89835 /* PartyRock.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -285,6 +291,8 @@
 			files = (
 				F8B001A9204B7F57000D5B4D /* VideoVC.swift in Sources */,
 				F85EDBFA20306DC700D88E0F /* MainVC.swift in Sources */,
+				F8990A1F204F483F00D89835 /* PartyRock.swift in Sources */,
+				F8990A1D204F46F800D89835 /* PartyCell.swift in Sources */,
 				F85EDBF820306DC700D88E0F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

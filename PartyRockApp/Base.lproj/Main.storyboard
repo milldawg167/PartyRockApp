@@ -28,10 +28,10 @@
                                 <rect key="frame" x="0.0" y="205" width="375" height="38"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="jcJ-SA-SXF">
-                                        <rect key="frame" x="8" y="2" width="359" height="30"/>
+                                        <rect key="frame" x="0.0" y="2" width="375" height="30"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bTb-gm-EA5">
-                                                <rect key="frame" x="0.0" y="0.0" width="119.5" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="125" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="77" id="8Pc-ja-cHh"/>
                                                     <constraint firstAttribute="height" constant="30" id="Gbl-qB-MDx"/>
@@ -42,7 +42,7 @@
                                                 </state>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7pS-sb-SJq">
-                                                <rect key="frame" x="119.5" y="0.0" width="120" height="30"/>
+                                                <rect key="frame" x="125" y="0.0" width="125" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="KCW-dg-Yps"/>
                                                     <constraint firstAttribute="width" constant="77" id="aFS-T0-Z0Q"/>
@@ -53,7 +53,7 @@
                                                 </state>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JII-rm-Yu8">
-                                                <rect key="frame" x="239.5" y="0.0" width="119.5" height="30"/>
+                                                <rect key="frame" x="250" y="0.0" width="125" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="77" id="8bw-9S-6fl"/>
                                                     <constraint firstAttribute="height" constant="30" id="8wg-5j-oUN"/>
@@ -69,16 +69,16 @@
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="jcJ-SA-SXF" firstAttribute="top" secondItem="VQd-al-8QC" secondAttribute="top" constant="2" id="7ev-JV-hUM"/>
-                                    <constraint firstItem="jcJ-SA-SXF" firstAttribute="leading" secondItem="VQd-al-8QC" secondAttribute="leading" constant="8" id="8J8-I7-qwD"/>
+                                    <constraint firstItem="jcJ-SA-SXF" firstAttribute="leading" secondItem="VQd-al-8QC" secondAttribute="leading" id="8J8-I7-qwD"/>
                                     <constraint firstAttribute="height" constant="38" id="IAG-Hd-1fl"/>
-                                    <constraint firstAttribute="trailing" secondItem="jcJ-SA-SXF" secondAttribute="trailing" constant="8" id="O4K-dT-98O"/>
+                                    <constraint firstAttribute="trailing" secondItem="jcJ-SA-SXF" secondAttribute="trailing" id="O4K-dT-98O"/>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mRt-yK-6WD">
                                 <rect key="frame" x="0.0" y="243" width="375" height="424"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="73" id="mGo-jO-UhX">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PartyCell" rowHeight="73" id="mGo-jO-UhX" customClass="PartyCell" customModule="PartyRockApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="73"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mGo-jO-UhX" id="HHM-cV-BYq">
@@ -110,6 +110,10 @@
                                                 <constraint firstItem="9U3-W1-f2G" firstAttribute="leading" secondItem="voR-LX-5iP" secondAttribute="trailing" constant="23" id="oiG-4o-4XN"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="videoPreviewImage" destination="voR-LX-5iP" id="VoG-U3-XMd"/>
+                                            <outlet property="videoTitle" destination="9U3-W1-f2G" id="7Nc-bP-kfq"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -130,6 +134,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="tableView" destination="mRt-yK-6WD" id="8Io-jF-rpq"/>
                         <segue destination="9gR-hr-j6W" kind="showDetail" identifier="VideoVC" id="Bsj-1U-Rnj"/>
                     </connections>
                 </viewController>
